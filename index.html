@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Greetings Human</title>
+
+</head>
+<body>
+    <div class="section">
+        <div id="initialgreet">
+            <h1 >Greetings Human!</h1>
+            <p>Please select the language and login to recieve a greeting in your selected langauge.</p>
+        </div>
+
+        <div id="logindiv">
+            <select id="lang">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="zulu">isiZulu</option>
+            </select>
+
+            <input type="text" placeholder="First Name" name="firstname" id="firstname">
+            <input type="text" placeholder="Last Name" name="firstname" id="lastname">
+
+
+            <input type="button" value="Login" id="login"/>
+        </div>
+        <h1 id="greeting"></h1>
+    </div>
+
+    <script src="jquery-1.11.2.js"></script>
+    <script src="xo-framework.js"></script>
+    <script src="main.js"></script>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDbI8fUkDIraapv1LO0oYRzCcXXTi8WAcY",
+          authDomain: "xo-greeting-app.firebaseapp.com",
+          projectId: "xo-greeting-app",
+          storageBucket: "xo-greeting-app.appspot.com",
+          messagingSenderId: "834069811525",
+          appId: "1:834069811525:web:b77e00516fdb855d30ee2c",
+          measurementId: "G-4XVFPM86T9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
